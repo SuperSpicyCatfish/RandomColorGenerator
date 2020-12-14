@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">RandomColorGenerator</string>
+    <color name="colorRed">#ff0000</color>
+    <color name="colorBlue">#0000ff</color>
+    <color name="colorGreen">#00ff00</color>
+    <color name="colorBlack">#000000</color>
 </resources>
