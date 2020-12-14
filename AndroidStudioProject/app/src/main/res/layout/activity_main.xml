@@ -13,20 +13,21 @@
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Header"
             android:gravity="center"
-            android:background="@color/colorBlack"/>
+            android:background="@color/pastel_purple"/>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:weightSum="2" >
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Generate Color" />
 
-        <Button
+            <Button
+                android:id="@+id/gen_color_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Generate Color" />
+
+            <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -43,36 +44,37 @@
             <Space
                 android:layout_height="80dp"
                 android:layout_width="match_parent"/>
+
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@color/colorRed"
+                android:layout_height="100dp"
+                android:background="@color/pastel_red"
                 android:gravity="center"
-                android:text="Color Picker" />
+                android:text="@string/textView1_text" />
 
-            <Space
-                android:layout_height="80dp"
-                android:layout_width="match_parent"/>
+<!--            <Space-->
+<!--                android:layout_height="80dp"-->
+<!--                android:layout_width="match_parent"/>-->
 
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@color/colorBlue"
+                android:layout_height="100dp"
+                android:background="@color/pastel_blue"
                 android:gravity="center"
-                android:text="Color Picker" />
-            <Space
-                android:layout_height="80dp"
-                android:layout_width="match_parent"/>
+                android:text="@string/textView2_text" />
+<!--            <Space-->
+<!--                android:layout_height="80dp"-->
+<!--                android:layout_width="match_parent"/>-->
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:background="@color/colorGreen"
+                android:layout_height="100dp"
+                android:background="@color/pastel_green"
                 android:gravity="center"
-                android:text="Color Picker" />
+                android:text="#94FA92" />
 
 
         </LinearLayout>
@@ -104,7 +106,7 @@
         android:id="@+id/footer"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/colorBlack"/>
+        android:background="@color/pastel_purple"/>
 
 </LinearLayout>
 
