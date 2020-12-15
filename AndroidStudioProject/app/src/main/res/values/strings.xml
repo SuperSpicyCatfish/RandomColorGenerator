@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">Color Coder</string>
-    <string name="textView1_text">#E0BBE4</string>
-    <string name="textView2_text">#80E2FF</string>
+    <string name="textView1_text">#FF9AA2</string>
+    <string name="textView2_text">#FFDAC1</string>
+    <string name="textView3_text">#E2F0CB</string>
+    <string name="textView4_text">#B5EAD7</string>
+    <string name="textView5_text">Color Picker</string>
+    <string name="gen_color_text">Generate</string>
+
+    <string-array name="color_options">
+        <item>All Colors</item>
+        <item>Monochromatic</item>
+        <item>Analogous</item>
+        <item>Complementary</item>
+        <item>Split Complementary</item>
+        <item>Triadic</item>
+        <item>Tetradic</item>
+    </string-array>
 </resources>

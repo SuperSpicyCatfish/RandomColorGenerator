@@ -6,44 +6,46 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        x<TextView
-            android:id="@+id/header"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:background="@color/pastel_purple"/>
+<!--        <TextView-->
+<!--            android:id="@+id/header"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:gravity="center"-->
+<!--            android:background="@color/pastel_purple"/>-->
         <LinearLayout
+
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:weightSum="2" >
+
 
             <Button
                 android:id="@+id/gen_color_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Generate Color" />
+                android:text="@string/gen_color_text" />
 
-            <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Color Options" />
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
 
          </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="512dp"
+            android:layout_height="400dp"
             android:orientation="vertical">
 
-            <Space
-                android:layout_height="80dp"
-                android:layout_width="match_parent"/>
+            <!--            <Space-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="80dp" />-->
 
             <TextView
                 android:id="@+id/textView1"
@@ -53,28 +55,36 @@
                 android:gravity="center"
                 android:text="@string/textView1_text" />
 
-<!--            <Space-->
-<!--                android:layout_height="80dp"-->
-<!--                android:layout_width="match_parent"/>-->
+            <!--            <Space-->
+            <!--                android:layout_height="80dp"-->
+            <!--                android:layout_width="match_parent"/>-->
 
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@color/pastel_blue"
+                android:background="@color/pastel_orange"
                 android:gravity="center"
                 android:text="@string/textView2_text" />
-<!--            <Space-->
-<!--                android:layout_height="80dp"-->
-<!--                android:layout_width="match_parent"/>-->
+            <!--            <Space-->
+            <!--                android:layout_height="80dp"-->
+            <!--                android:layout_width="match_parent"/>-->
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:background="@color/pastel_yellow"
+                android:gravity="center"
+                android:text="@string/textView3_text" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:background="@color/pastel_green"
                 android:gravity="center"
-                android:text="#94FA92" />
+                android:text="@string/textView4_text" />
 
 
         </LinearLayout>
@@ -82,19 +92,31 @@
         <LinearLayout
 
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="2" >
+            android:layout_height="55dp"
+            android:weightSum="2">
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="- Color" />
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="+ Color " />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_500"
+                android:gravity="center"
+                android:text="@string/textView5_text"
+                android:textColor="@color/white"
+                android:textSize="20dp">
+
+
+            </TextView>
+
+            <!--            <Button-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:text="- Color" />-->
+            <!--            <Button-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:text="+ Color " />-->
 
         </LinearLayout>
 
@@ -102,11 +124,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <TextView
-        android:id="@+id/footer"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/pastel_purple"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/footer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:background="@color/pastel_purple"/>-->
 
 </LinearLayout>
 

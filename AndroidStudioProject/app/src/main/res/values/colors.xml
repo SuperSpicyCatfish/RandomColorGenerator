@@ -10,8 +10,12 @@
     <color name="red">#ff0000</color>
     <color name="blue">#0000ff</color>
     <color name="green">#00ff00</color>
-    <color name="pastel_red">#FF6961</color>
+
+    <color name="pastel_red">#FF9AA2</color>
+    <color name="pastel_orange">#FFDAC1</color>
+    <color name="pastel_yellow">#E2F0CB</color>
+    <color name="pastel_green">#B5EAD7</color>
+
     <color name="pastel_blue">#80E2FF</color>
-    <color name="pastel_green">#94FA92</color>
     <color name="pastel_purple">#E0BBE4</color>
 </resources>
