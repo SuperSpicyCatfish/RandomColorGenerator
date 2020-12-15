@@ -18,4 +18,6 @@
 
     <color name="pastel_blue">#80E2FF</color>
     <color name="pastel_purple">#E0BBE4</color>
+
+    <color  name="temp">#FFFFFF</color>
 </resources>
