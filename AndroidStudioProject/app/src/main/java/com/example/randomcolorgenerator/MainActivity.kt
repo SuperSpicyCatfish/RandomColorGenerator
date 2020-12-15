@@ -1,14 +1,14 @@
 package com.example.randomcolorgenerator
 
-import android.graphics.Color.convert
-import android.graphics.Color.rgb
+import android.app.Activity
+import android.graphics.Color
+import android.graphics.Color.*
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
+import androidx.annotation.RequiresApi
 import kotlin.random.Random
 
 
@@ -17,14 +17,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var genColorButton: Button
     private lateinit var textView1: TextView
     private lateinit var spinner1: Spinner
-    // random values for RGB
-    var randR = 0
-    var randG = 0
-    var randB = 0
-    var temp = 0
-    // current position of the spinner, there are 6 choices, so 0-5 are valid numbers
-    var currentPos = 0
 
+    var selectedColor = 0 // the random created color
+
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,29 +33,37 @@ class MainActivity : AppCompatActivity() {
         // this is for the spinner
         ArrayAdapter.createFromResource(this,R.array.color_options,android.R.layout.simple_spinner_item).also{
             adapter -> adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            spinner1.adapter = adapter
+            spinner1.adapter = adapter // setAdapter
         }
 
 
 
-
+        // when the user clicks the generate button
         genColorButton.setOnClickListener { view: View ->
-            allColors()
-            temp = rgb(randR,randG,randB)
 
-            // Integer.toHexString(temp)
-            textView1.setBackgroundColor(resources.getColor(R.color.teal_200))
-            textView1.setText(randR.toString())
+            if(spinner1.selectedItemPosition == 0){ // ALL COLORS OPTION SELECTED
+                allColors() // generates the new color
+                textView1.setBackgroundColor(selectedColor)
+                textView1.setText("#"+Integer.toHexString(selectedColor))
+            }
+            else{ // FOR TESTING PURPOSES, ANY OTHER OPTION SELECTED
+                textView1.setText("else")
+            }
+
 
         }
 
     }
 
-    fun  allColors(){
-        randR = Random.nextInt(0,255)
-        randG = Random.nextInt(0,255)
-        randB = Random.nextInt(0,255)
+    fun  allColors(){ // the range of this is all
+        // creates and stores the newly generated color int into selectedColor
+        selectedColor = Color.argb((Random.nextInt(0,255)), Random.nextInt(0,255), Random.nextInt(0,255), Random.nextInt(0,255))
     }
+
+
 
 
 }
+
+
+
