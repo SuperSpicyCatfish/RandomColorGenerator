@@ -124,7 +124,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+<ImageView
+                android:id="@+id/colorwheel"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:src="@drawable/colorwheel" />
+            <View
+                android:id="@+id/colorbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
 
+            <TextView
+                android:id="@+id/resultcolor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HEX: \nRGB"
+                android:textSize="18sp"
+
+                 />
 <!--    <TextView-->
 <!--        android:id="@+id/footer"-->
 <!--        android:layout_width="match_parent"-->
