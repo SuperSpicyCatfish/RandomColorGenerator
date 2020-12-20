@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/header"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:gravity="center"-->
+        <!--            android:background="@color/pastel_purple"/>-->
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2" >
+
+
+            <Button
+                android:id="@+id/gen_color_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/gen_color_text" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical">
+
+            <!--            <Space-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="80dp" />-->
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/pastel_red"
+                android:gravity="center"
+                android:text="@string/textView1_text" />
+
+            <!--            <Space-->
+            <!--                android:layout_height="80dp"-->
+            <!--                android:layout_width="match_parent"/>-->
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/pastel_orange"
+                android:gravity="center"
+                android:text="@string/textView2_text" />
+            <!--            <Space-->
+            <!--                android:layout_height="80dp"-->
+            <!--                android:layout_width="match_parent"/>-->
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/pastel_yellow"
+                android:gravity="center"
+                android:text="@string/textView3_text" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/pastel_green"
+                android:gravity="center"
+                android:text="@string/textView4_text" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_500"
+                android:gravity="center"
+                android:text="@string/textView5_text"
+                android:textColor="@color/white"
+                android:textSize="20dp">
+
+
+            </TextView>
+
+            <!--            <Button-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:text="- Color" />-->
+            <!--            <Button-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:text="+ Color " />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/colorwheel"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:src="@drawable/colorwheel" />
+            <View
+                android:id="@+id/colorbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:id="@+id/resultcolor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HEX: \nRGB"
+                android:textSize="18sp"
+
+                />
+            <!--    <TextView-->
+            <!--        android:id="@+id/footer"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="60dp"-->
+            <!--        android:background="@color/pastel_purple"/>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
