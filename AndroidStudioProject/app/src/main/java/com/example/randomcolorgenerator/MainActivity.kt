@@ -11,6 +11,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
+import androidx.core.graphics.alpha
 import androidx.core.graphics.blue
 import androidx.core.graphics.green
 import androidx.core.graphics.red
@@ -76,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                 textView4.setText("#"+Integer.toHexString(selectedColor))
 
             }
-            else if(spinner1.selectedItemPosition == 1) {
+            else if(spinner1.selectedItemPosition == 1) { // MONOCHROMATIC OPTION SELECTED
                 monochromatic(0)
                 textView1.setBackgroundColor(selectedColor)
                 textView1.setText("#"+Integer.toHexString(selectedColor))
@@ -90,6 +91,59 @@ class MainActivity : AppCompatActivity() {
                 textView3.setText("#"+Integer.toHexString(selectedColor))
 
                 monochromatic(1)
+                textView4.setBackgroundColor(selectedColor)
+                textView4.setText("#"+Integer.toHexString(selectedColor))
+
+            }
+            else if(spinner1.selectedItemPosition == 2){ // ANALOGOUS OPTION SELECTED
+                analogous(0)
+                textView1.setBackgroundColor(selectedColor)
+                textView1.setText("#"+Integer.toHexString(selectedColor))
+
+                analogous(1)
+                textView2.setBackgroundColor(selectedColor)
+                textView2.setText("#"+Integer.toHexString(selectedColor))
+
+                analogous(1)
+                textView3.setBackgroundColor(selectedColor)
+                textView3.setText("#"+Integer.toHexString(selectedColor))
+
+                analogous(1)
+                textView4.setBackgroundColor(selectedColor)
+                textView4.setText("#"+Integer.toHexString(selectedColor))
+            }
+            else if(spinner1.selectedItemPosition == 3){ // COMPLEMENTARY IS SELECTED
+                complementary(0)
+                textView1.setBackgroundColor(selectedColor)
+                textView1.setText("#"+Integer.toHexString(selectedColor))
+
+                complementary(2)
+                textView2.setBackgroundColor(selectedColor)
+                textView2.setText("#"+Integer.toHexString(selectedColor))
+
+                complementary(1)
+                textView3.setBackgroundColor(selectedColor)
+                textView3.setText("#"+Integer.toHexString(selectedColor))
+
+                complementary(2)
+                textView4.setBackgroundColor(selectedColor)
+                textView4.setText("#"+Integer.toHexString(selectedColor))
+
+            }
+            else if(spinner1.selectedItemPosition == 4){// TETRADIC IS SELECTED
+                tetradic(0)
+                textView1.setBackgroundColor(selectedColor)
+                textView1.setText("#"+Integer.toHexString(selectedColor))
+
+                tetradic(1)
+                textView2.setBackgroundColor(selectedColor)
+                textView2.setText("#"+Integer.toHexString(selectedColor))
+
+                tetradic(0)
+                textView3.setBackgroundColor(selectedColor)
+                textView3.setText("#"+Integer.toHexString(selectedColor))
+
+                tetradic(1)
                 textView4.setBackgroundColor(selectedColor)
                 textView4.setText("#"+Integer.toHexString(selectedColor))
 
@@ -126,18 +180,52 @@ class MainActivity : AppCompatActivity() {
 
     fun  allColors(){ // the range of this is all
         // creates and stores the newly generated color int into selectedColor
-        selectedColor = Color.argb((Random.nextInt(0,255)), Random.nextInt(0,255), Random.nextInt(0,255), Random.nextInt(0,255))
+        selectedColor = Color.argb(Random.nextInt(0,255), Random.nextInt(0,255), Random.nextInt(0,255), Random.nextInt(0,255))
     }
 
     fun monochromatic(givenColor : Int){
-        if(givenColor == 0){
-            selectedColor = Color.argb((Random.nextInt(0,255)), Random.nextInt(0,255), Random.nextInt(0,255), Random.nextInt(0,255))
+        if(givenColor == 0){ // generates the first color that the rest of the colors are based off of
+            allColors()
         }
-        else{
-            selectedColor = Color.argb((Random.nextInt(0,255)), selectedColor.red, selectedColor.green, selectedColor.blue)
+        else{ // generates the other colors, different alphas
+            selectedColor = Color.argb(Random.nextInt(0,255), selectedColor.red, selectedColor.green, selectedColor.blue)
         }
     }
 
+
+    fun analogous(givenColor: Int){
+        if(givenColor == 0){
+            allColors()
+        }
+        else{
+            selectedColor = Color.argb(selectedColor.alpha, selectedColor.red - 60, selectedColor.green - 60, selectedColor.blue - 60)
+
+        }
+    }
+
+    fun complementary(givenColor: Int){
+        if(givenColor == 0){// first get a random generated color
+            allColors()
+        }
+        else if(givenColor == 1) {// get its complement
+            selectedColor = Color.argb(selectedColor.alpha, (255 - selectedColor.red), (255 - selectedColor.green), (255 - selectedColor.blue))
+        }
+        else if(givenColor == 2){ // get a shade
+            monochromatic(1)
+        }
+    }
+
+
+    fun tetradic(givenColor: Int){ // tetradic = double complementary
+        if(givenColor == 0){// first get a random generated color
+            allColors()
+        }
+        else if(givenColor == 1) {// get its complement
+            selectedColor = Color.argb(selectedColor.alpha, (255 - selectedColor.red), (255 - selectedColor.green), (255 - selectedColor.blue))
+        }
+
+
+    }
 
 
 }

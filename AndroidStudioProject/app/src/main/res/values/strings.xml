@@ -12,8 +12,6 @@
         <item>Monochromatic</item>
         <item>Analogous</item>
         <item>Complementary</item>
-        <item>Split Complementary</item>
-        <item>Triadic</item>
         <item>Tetradic</item>
     </string-array>
 </resources>
